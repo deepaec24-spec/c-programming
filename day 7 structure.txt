@@ -1,0 +1,172 @@
+#include<stdio.h>
+#include<string.h>
+struct structure{
+    int reg;
+    char name[10];
+    float cgpa;
+};
+
+int main(){
+    struct structure stru1;
+    struct structure stru2;
+    stru1.reg = 1;
+    stru2.reg = 2;
+    strcpy(stru1.name ,"Arun");
+    stru1.cgpa = 9.1;
+    stru2.cgpa = 8.3;
+    
+    printf("The Reg no is:%d\n",stru1.reg);
+    printf("The Reg no is:%d\n",stru2.reg);
+    printf("The name is : %s\n",stru1.name);
+    printf("cgpa is:%.2f\n",stru1.cgpa);
+    printf("cgpa is:%.2f\n",stru2.cgpa);
+    return 0 ;
+}
+
+The Reg no is:1
+The Reg no is:2
+The name is : Arun
+cgpa is:9.10
+cgpa is:8.30
+
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+
+struct structure {
+    int rollnumber;
+    char name[5];
+    float marks;
+};
+
+int main(){
+    struct structure stru1;
+    
+    stru1.rollnumber = 06;
+    strcpy(stru1.name,"Deepa");
+    stru1.marks = 9.10;
+    
+    printf("Roll number : %d\n",stru1.rollnumber);
+    printf("The name is : %s\n",stru1.name);
+    printf("Marks : %.2f\n",stru1.marks);
+    return 0;
+}
+
+
+Roll number : 6
+The name is : Deepa
+Marks : 9.10
+
+
+#include<stdio.h>
+
+struct structure{
+    int employeeID;
+    float salary;
+};
+
+int main(){
+    struct structure emp[3];
+    
+    
+    for(int i=0;i<3;i++){
+        scanf("%d",&emp[i].employeeID);
+        scanf("%f",&emp[i].salary);
+    }
+    
+ for(int i=0;i<3;i++){
+    
+    printf("EmployeeID:%d\n",emp[i].employeeID);
+    printf("Salary: %.2f\n",emp[i].salary);
+ }
+  
+    return 0;
+}
+
+
+EmployeeID:2026
+Salary: 20000.00
+EmployeeID:2078
+Salary: 30000.00
+EmployeeID:6795
+Salary: 90000.00
+
+
+#include<stdio.h>
+
+struct structure{
+    
+   long int number;
+    float recharge;
+    
+};
+int main(){
+struct structure stru1;
+
+ stru1.number = 1234567890;
+ stru1.recharge = 500.00;
+ 
+ printf("Number :%ld\n",stru1.number);
+ printf("Recharge :%.2f\n",stru1.recharge);
+ 
+ return 0;
+}
+ 
+ Number :1234567890
+Recharge :500.00
+
+
+
+
+#include<stdio.h>
+struct student {
+    char firstname[20];
+    char lastname[20];
+};
+struct details{
+    char dept[10];
+    int year;
+    struct student name;
+};
+
+int main(){
+    struct student stdname ={"Srika","Priyadharsini"};
+    struct details std1 = {"ECE",2028,stdname};
+    printf("My name is %s %s from the department of %s,completed in the year of %d.",std1.name.firstname,std1.name.lastname,std1.dept,std1.year);
+    return 0;
+}
+
+My name is Srika Priyadharsini from the department of ECE, completed in the year of 2028.
+
+  
+
+#include<stdio.h>
+struct student{
+char name[20];
+int regno;
+};
+int main()
+{
+struct student std1 = {"Arun",1001};
+struct student *point = &std1;
+
+printf("My name is %s \n",point -> name);
+printf("My name's memory address is %p \n",point->name);
+
+printf("My reg  no is %d\n",point -> regno);
+printf("My regno's memory address is %p\n",point->regno);
+return 0;
+}
+
+
+My name is Arun 
+My name's memory address is 0x7ffd4f3da730 
+My reg  no is 1001
+My regno's memory address is 0x3e9
+
+
+
