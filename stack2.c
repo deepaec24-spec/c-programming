@@ -50,3 +50,12 @@ int main() {
    
     return 0;
 }
+
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    printf("Sensor triggered %d times\n",n);
+    printf("Total triggers:%d",n);
+    return 0;
+}
