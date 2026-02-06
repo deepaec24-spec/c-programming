@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+    int numbers[5] = {8,9,7,5,4};
+    int *point = numbers;
+    
+    printf("%d\n",*point);
+    printf("%d\n",*(point +1));
+    point++;
+    printf("%d\n",*point);
+    point--;
+    printf("%d\n",*point);
+    point+=2;
+    printf("%d\n",*point);
+    return 0;
+}
